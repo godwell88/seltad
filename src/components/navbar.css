@@ -1,0 +1,58 @@
+.navbar {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+/* TAB STYLE */
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  padding: 14px 22px;
+
+  border-radius: 12px;
+
+  transition: 0.3s ease;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(10px);
+}
+
+/* HOVER EFFECT */
+
+.nav-links a:hover {
+  background: #c89b3c;
+
+  color: white;
+
+  transform: translateY(-2px);
+}
