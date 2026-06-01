@@ -1,7 +1,7 @@
 .process-page {
   width: 100%;
 
-  padding: 100px 40px;
+  padding: 6.25rem 2.5rem;
 
   background: #f7f8f6;
 
@@ -13,32 +13,32 @@
 .process-header {
   text-align: center;
 
-  max-width: 900px;
+  max-width: 56.25rem;
 
-  margin: 0 auto 80px;
+  margin: 0 auto 5rem;
 }
 
 .process-header span {
   color: #c89a3d;
 
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
 
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem;
 }
 
 .process-header h2 {
-  font-size: 70px;
+  font-size: 4.375rem;
 
   color: #072e22;
 
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 
 .process-header p {
   color: #555;
 
-  font-size: 20px;
+  font-size: 1.25rem;
 
   line-height: 1.8;
 }
@@ -46,7 +46,7 @@
 /* GRID */
 
 .process-grid {
-  max-width: 1400px;
+  max-width: 87.5rem;
 
   margin: 0 auto;
 
@@ -54,7 +54,7 @@
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 35px;
+  gap: 2.1875rem;
 }
 
 /* CARD */
@@ -64,20 +64,20 @@
 
   background: white;
 
-  padding: 40px;
+  padding: 2.5rem;
 
-  border-radius: 16px;
+  border-radius: 1rem;
 
   text-align: center;
 
   box-shadow:
-    0 10px 30px rgba(0,0,0,.08);
+    0 0.625rem 1.875rem rgba(0,0,0,.08);
 
   transition: .3s ease;
 }
 
 .process-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-0.5rem);
 }
 
 /* NUMBER */
@@ -85,11 +85,11 @@
 .process-number {
   position: absolute;
 
-  top: 20px;
-  left: 20px;
+  top: 1.25rem;
+  left: 1.25rem;
 
-  width: 65px;
-  height: 65px;
+  width: 4.0625rem;
+  height: 4.0625rem;
 
   border-radius: 50%;
 
@@ -103,39 +103,39 @@
   align-items: center;
   justify-content: center;
 
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
 /* ICON */
 
 .process-icon {
-  margin-top: 40px;
+  margin-top: 2.5rem;
 
   color: #072e22;
 
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
 }
 
 /* TITLE */
 
 .process-card h3 {
-  font-size: 32px;
+  font-size: 2rem;
 
   color: #072e22;
 
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 /* GOLD LINE */
 
 .gold-line {
-  width: 70px;
+  width: 4.375rem;
   height: 3px;
 
   background: #c89a3d;
 
-  margin: 0 auto 25px;
+  margin: 0 auto 1.5625rem;
 }
 
 /* TEXT */
@@ -143,27 +143,27 @@
 .process-card p {
   color: #555;
 
-  font-size: 18px;
+  font-size: 1.125rem;
 
   line-height: 1.8;
 }
 
 /* RESPONSIVE */
 
-@media (max-width: 1100px) {
+@media (max-width: 68.75rem) {
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .process-header h2 {
-    font-size: 56px;
+    font-size: 3.5rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
 
   .process-page {
-    padding: 80px 20px;
+    padding: 5rem 1.25rem;
   }
 
   .process-grid {
@@ -171,14 +171,14 @@
   }
 
   .process-header h2 {
-    font-size: 42px;
+    font-size: 2.625rem;
   }
 
   .process-header p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .process-card h3 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 }

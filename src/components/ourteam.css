@@ -13,7 +13,7 @@
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 35px;
+  gap: 2.1875rem;
 }
 
 /* CARD */
@@ -25,32 +25,32 @@
     radial-gradient(circle at top right, rgba(200, 154, 61, 0.16), transparent 24%),
     linear-gradient(180deg, #fffdf8 0%, #f3efe4 100%);
   border: 1px solid rgba(10, 79, 57, 0.12);
-  border-top: 4px solid #c89a3d;
-  border-radius: 45px;
-  padding: 35px 30px;
+  border-top: 0.25rem solid #c89a3d;
+  border-radius: 2.8125rem;
+  padding: 2.1875rem 1.875rem;
   text-align: center;
   transition: 0.3s ease;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0.3125rem 1.5625rem rgba(0, 0, 0, 0.04);
 }
 
 .team-card::after {
   content: "";
   position: absolute;
-  inset: auto 22px 0;
+  inset: auto 1.375rem 0;
   height: 3px;
   background: linear-gradient(90deg, rgba(10, 79, 57, 0), #0a4f39, #c89a3d, rgba(10, 79, 57, 0));
 }
 
 .team-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(4, 31, 23, 0.12);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1.125rem 2.5rem rgba(4, 31, 23, 0.12);
 }
 
 /* IMAGE */
 
 .team-image {
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
 
   margin: auto;
 
@@ -58,7 +58,7 @@
 
   overflow: hidden;
 
-  border: 4px solid #0b3d2e;
+  border: 0.25rem solid #0b3d2e;
 }
 
 .team-image img {
@@ -71,11 +71,11 @@
 /* CONTENT */
 
 .team-content {
-  margin-top: 25px;
+  margin-top: 1.5625rem;
 }
 
 .team-content h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 
   color: #0a4f39;
@@ -86,44 +86,44 @@
 .team-content span {
   display: inline-block;
 
-  margin-top: 10px;
+  margin-top: 0.625rem;
 
   color: #c89a3d;
 
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
 }
 
 /* DESCRIPTION */
 
 .team-content p {
-  margin-top: 18px;
+  margin-top: 1.125rem;
 
   color: #45534d;
 
   line-height: 1.8;
 
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 /* RESPONSIVE */
 
-@media (max-width: 1100px) {
+@media (max-width: 68.75rem) {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .team-grid {
     grid-template-columns: 1fr;
   }
 
   .team-card {
-    padding: 30px 25px;
+    padding: 1.875rem 1.5625rem;
   }
 
   .team-content h3 {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
 }

@@ -1,6 +1,6 @@
 .services-section {
   width: 100%;
-  padding: 64px 40px 92px;
+  padding: 4rem 2.5rem 5.75rem;
   background:
     linear-gradient(
       145deg,
@@ -12,15 +12,15 @@
 }
 
 .services-header {
-  max-width: 1100px;
-  margin: 0 auto 28px;
+  max-width: 68.75rem;
+  margin: 0 auto 1.75rem;
 }
 
 .services-subtitle {
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
   color: #c89a3d;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -29,41 +29,41 @@
 .services-header h2 {
   margin: 0;
   color: #ffffff;
-  font-size: 42px;
+  font-size: 2.625rem;
   font-weight: 400;
   line-height: 1.1;
 }
 
 .services-header p {
-  max-width: 680px;
-  margin: 18px 0 0;
+  max-width: 42.5rem;
+  margin: 1.125rem 0 0;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 1.7;
 }
 
 .services-wrapper {
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  gap: 1.875rem;
 }
 
 .service-card {
   position: relative;
-  height: 410px;
+  height: 25.625rem;
   overflow: hidden;
   background: var(--service-accent, #072e22);
   cursor: pointer;
   border: 1px solid rgba(200, 154, 61, 0.24);
-  border-radius: 22px;
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  border-radius: 1.375rem;
+  box-shadow: 0 1.125rem 3rem rgba(0, 0, 0, 0.18);
 }
 
 .service-image {
   position: relative;
-  height: 242px;
+  height: 15.125rem;
   overflow: hidden;
 }
 
@@ -93,8 +93,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  min-height: 168px;
-  padding: 24px 28px 26px;
+  min-height: 10.5rem;
+  padding: 1.5rem 1.75rem 1.625rem;
   background: var(--service-accent, #072e22);
   color: #ffffff;
   transition:
@@ -105,21 +105,21 @@
 .service-content h3 {
   margin: 0;
   color: #ffffff;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 1;
 }
 
 .service-content p {
-  margin: 22px 0 28px;
+  margin: 1.375rem 0 1.75rem;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.5;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transform: translateY(18px);
+  transform: translateY(1.125rem);
   transition:
     opacity 0.3s ease,
     transform 0.45s ease,
@@ -127,23 +127,23 @@
 }
 
 .service-line {
-  width: 132px;
-  height: 4px;
+  width: 8.25rem;
+  height: 0.25rem;
   background: #c89a3d;
-  margin-top: 56px;
+  margin-top: 3.5rem;
   transition: margin-top 0.45s ease;
 }
 
 .service-content a {
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 1.125rem;
   color: #c89a3d;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 0.04em;
   opacity: 0;
-  transform: translateY(14px);
+  transform: translateY(0.875rem);
   transition:
     opacity 0.3s ease,
     transform 0.45s ease;
@@ -162,14 +162,14 @@
 }
 
 .service-card:hover .service-content {
-  min-height: 312px;
-  padding-top: 28px;
-  padding-bottom: 30px;
+  min-height: 19.5rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.875rem;
 }
 
 .service-card:hover .service-content p {
   opacity: 1;
-  max-height: 220px;
+  max-height: 13.75rem;
   transform: translateY(0);
 }
 
@@ -182,40 +182,40 @@
   transform: translateY(0);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 75rem) {
   .services-section {
-    padding-inline: 28px;
+    padding-inline: 1.75rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .services-section {
-    padding: 52px 20px 72px;
+    padding: 3.25rem 1.25rem 4.5rem;
   }
 
   .services-header h2 {
-    font-size: 34px;
+    font-size: 2.125rem;
   }
 
   .services-header p {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 
   .services-wrapper {
-    gap: 22px;
+    gap: 1.375rem;
   }
 
   .service-card {
-    height: 400px;
+    height: 25rem;
   }
 
   .service-content {
-    min-height: 190px;
+    min-height: 11.875rem;
   }
 
   .service-content p {
     opacity: 1;
-    max-height: 180px;
+    max-height: 11.25rem;
     transform: translateY(0);
   }
 
