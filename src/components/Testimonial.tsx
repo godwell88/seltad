@@ -5,7 +5,11 @@ import "./testimonial.css";
 
 const testimonials = [
   {
+<<<<<<< HEAD
     name: "Moses Moyo",
+=======
+    name: "John Moyo",
+>>>>>>> 9783da2b381e4ab3c19c9401568402425ebbb0b8
 
     testimony:
       "Seltad handled our insurance assessment with professionalism and accuracy. Their reporting process was transparent and highly detailed.",
@@ -13,7 +17,11 @@ const testimonials = [
   },
 
   {
+<<<<<<< HEAD
     name: "John Chibadura",
+=======
+    name: "Susan",
+>>>>>>> 9783da2b381e4ab3c19c9401568402425ebbb0b8
 
     testimony:
       "The team provided exceptional technical expertise during our claim evaluation process. Their support made everything smoother.",
@@ -21,7 +29,11 @@ const testimonials = [
   },
 
   {
+<<<<<<< HEAD
     name: "Ndoitwa Moyo",
+=======
+    name: "Tadiwa",
+>>>>>>> 9783da2b381e4ab3c19c9401568402425ebbb0b8
     testimony:
       "Reliable, responsive, and extremely knowledgeable. We highly recommend Seltad for professional risk and loss assessments.",
     image: personPlaceholder,
