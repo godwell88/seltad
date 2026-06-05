@@ -18,3 +18,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+#contactus,
+#services,
+[id^="service-"] {
+  scroll-margin-top: 7.5rem;
+}

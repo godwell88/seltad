@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { type MouseEvent, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   FaBars,
+  FaPhoneAlt,
   FaTimes,
 } from "react-icons/fa";
 
@@ -8,21 +10,60 @@ import logoImage from "../assets/mylogo.png";
 import "./header.css";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/#about", label: "About Us" },
-  { href: "/#services", label: "Our Services" },
-  { href: "/#process", label: "Claims Process" },
-  { href: "/#team", label: "Our People" },
-  { href: "/#contactus", label: "Contact Us" },
+  { href: "#/", label: "Home" },
+  { href: "#/about", label: "About Us", sectionId: "about" },
+  { href: "#/services", label: "Our Services", sectionId: "services" },
+  // To show this nav item again, restore the Claims Process section in
+  // src/pages/HomePage.tsx and uncomment the line below.
+  // { href: "#/process", label: "Claims Process", sectionId: "process" },
+  { href: "#/team", label: "Our Team", sectionId: "team" },
+  { href: "#/contactus", label: "Contact Us", sectionId: "contactus" },
 ];
+
+const PHONE_NUMBER = "+263 789 581 990";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId?: string) => {
+    if (!sectionId) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const handleNavClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    sectionId?: string,
+  ) => {
+    event.preventDefault();
+    setMenuOpen(false);
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      window.setTimeout(() => scrollToSection(sectionId), 0);
+      return;
+    }
+
+    scrollToSection(sectionId);
+  };
 
   return (
     <header className="header">
       <div className="header-container">
-        <a className="logo" href="/" aria-label="Seltad home">
+        <a
+          className="logo"
+          href="#/"
+          aria-label="Seltad home"
+          onClick={(event) => handleNavClick(event)}
+        >
           <img
             src={logoImage}
             alt="Seltad Logo"
@@ -38,8 +79,8 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className={link.href === "/" ? "active-link" : undefined}
-              onClick={() => setMenuOpen(false)}
+              className={!link.sectionId ? "active-link" : undefined}
+              onClick={(event) => handleNavClick(event, link.sectionId)}
             >
               {link.label === "Contact Us" ? (
                 <span style={{ display: "flex", alignItems: "center" }}>
@@ -58,6 +99,11 @@ export default function Header() {
             </a>
           ))}
         </nav>
+
+        <a className="header-phone" href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}>
+          <FaPhoneAlt aria-hidden="true" />
+          <span>{PHONE_NUMBER}</span>
+        </a>
 
         <button
           type="button"

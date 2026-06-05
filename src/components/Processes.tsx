@@ -92,7 +92,7 @@ export default function ClaimsProcess() {
               </div>
 
               <div className="process-icon">
-                <Icon size={60} />
+                <Icon size={36} />
               </div>
 
               <h3>{item.title}</h3>

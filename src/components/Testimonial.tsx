@@ -5,7 +5,7 @@ import "./testimonial.css";
 
 const testimonials = [
   {
-    name: "John Williams",
+    name: "Moses Moyo",
 
     testimony:
       "Seltad handled our insurance assessment with professionalism and accuracy. Their reporting process was transparent and highly detailed.",
@@ -13,7 +13,7 @@ const testimonials = [
   },
 
   {
-    name: "Sarah Mitchell",
+    name: "John Chibadura",
 
     testimony:
       "The team provided exceptional technical expertise during our claim evaluation process. Their support made everything smoother.",
@@ -21,7 +21,7 @@ const testimonials = [
   },
 
   {
-    name: "Michael Brown",
+    name: "Ndoitwa Moyo",
     testimony:
       "Reliable, responsive, and extremely knowledgeable. We highly recommend Seltad for professional risk and loss assessments.",
     image: personPlaceholder,

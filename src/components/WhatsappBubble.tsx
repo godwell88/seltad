@@ -2,7 +2,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 import "./whatsapp-bubble.css";
 
-const WHATSAPP_NUMBER = "263782557660";
+const WHATSAPP_NUMBER = "263789581990";
 
 export default function WhatsappBubble() {
   return (

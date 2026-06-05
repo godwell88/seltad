@@ -1,13 +1,24 @@
 import type { CSSProperties } from "react";
 
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { getServiceBySlug } from "../data/services";
 import "./service-detail.css";
 
 export default function ServiceDetailPage() {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const service = slug ? getServiceBySlug(slug) : undefined;
+
+  const goToContact = () => {
+    navigate("/");
+    window.setTimeout(() => {
+      document.getElementById("contactus")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 50);
+  };
 
   if (!service) {
     return (
@@ -45,6 +56,13 @@ export default function ServiceDetailPage() {
             <a href="/#services" className="service-detail-button secondary">
               Back to Services
             </a>
+            <button
+              type="button"
+              className="service-detail-button secondary"
+              onClick={goToContact}
+            >
+              Contact Us
+            </button>
           </div>
         </div>
       </section>

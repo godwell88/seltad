@@ -61,12 +61,15 @@
   justify-content: center;
   min-height: 3rem;
   padding: 0 1.5rem;
+  border: 0;
   border-radius: 62.4375rem;
   white-space: nowrap;
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
   transition:
     transform 0.25s ease,
     background-color 0.25s ease,
@@ -84,6 +87,7 @@
 
 .service-detail-button.secondary {
   border: 1px solid rgba(200, 154, 61, 0.55);
+  background: transparent;
   color: #ffffff;
 }
 

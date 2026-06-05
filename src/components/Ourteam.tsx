@@ -1,3 +1,4 @@
+import { useState } from "react";
 import personPlaceholder from "../assets/person_placeholder.png";
 import "./ourteam.css";
 
@@ -30,14 +31,26 @@ const teamMembers = [
   },
 ];
 
-const Ourteam = () => {
+export default function Ourteam() {
+  const [current, setCurrent] = useState(0);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % teamMembers.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent(
+      (prev) => (prev - 1 + teamMembers.length) % teamMembers.length
+    );
+  };
+
+  const member = teamMembers[current];
+
   return (
     <section className="team-section">
-
       <div className="container">
 
         <div className="section-title">
-
           <h2>Our Team</h2>
 
           <p>
@@ -49,43 +62,58 @@ const Ourteam = () => {
             <span className="dot"></span>
             <span className="line"></span>
           </div>
+        </div>
+
+        <div className="team-carousel">
+
+          <button
+            className="carousel-btn"
+            onClick={prevSlide}
+          >
+            ←
+          </button>
+
+          <div className="team-card">
+
+            <div className="team-image">
+              <img
+                src={member.image}
+                alt={member.name}
+              />
+            </div>
+
+            <div className="team-content">
+              <h3>{member.name}</h3>
+
+              <span>{member.role}</span>
+
+              <p>{member.description}</p>
+            </div>
+
+          </div>
+
+          <button
+            className="carousel-btn"
+            onClick={nextSlide}
+          >
+            →
+          </button>
 
         </div>
 
-        <div className="team-grid">
-
-          {teamMembers.map((member) => (
-
-            <div className="team-card" key={member.id}>
-
-              <div className="team-image">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  loading="lazy"
-                />
-              </div>
-
-              <div className="team-content">
-
-                <h3>{member.name}</h3>
-
-                <span>{member.role}</span>
-
-                <p>{member.description}</p>
-
-              </div>
-
-            </div>
-
+        <div className="carousel-dots">
+          {teamMembers.map((_, index) => (
+            <button
+              key={index}
+              className={`dot-btn ${
+                current === index ? "active-dot" : ""
+              }`}
+              onClick={() => setCurrent(index)}
+            />
           ))}
-
         </div>
 
       </div>
-
     </section>
   );
-};
-
-export default Ourteam;
+}

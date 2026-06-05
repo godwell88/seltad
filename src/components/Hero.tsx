@@ -1,6 +1,35 @@
 import heroImage from "../assets/accident 1.png";
 import "./Hero.css";
 
+const scrollToSection = (sectionId: string) => {
+  const section = document.getElementById(sectionId);
+
+  section?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "center",
+  });
+};
+
+const serviceHighlights = [
+  {
+    title: "Claims Handling",
+    subtitle: "Independent Assessments",
+    targetId: "service-motor-claims",
+    active: true,
+  },
+  {
+    title: "Risk Surveys",
+    subtitle: "Commercial & Industrial",
+    targetId: "service-risk-surveys-and-valuations",
+  },
+  {
+    title: "Valuations",
+    subtitle: "Evidence-Based Reporting",
+    targetId: "service-risk-surveys-and-valuations",
+  },
+];
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -21,10 +50,6 @@ export default function Hero() {
 
       <div className="hero-content">
 
-        <span className="hero-subtitle">
-          INDEPENDENT LOSS ADJUSTERS
-        </span>
-
         <h1>
           Technical Insurance
           Specialists &
@@ -43,13 +68,21 @@ export default function Hero() {
 
         <div className="hero-buttons">
 
-          <a href="#services" className="hero-primary-btn">
+          <button
+            type="button"
+            className="hero-primary-btn"
+            onClick={() => scrollToSection("services")}
+          >
             Our Services
-          </a>
+          </button>
 
-          <a href="#contactus" className="hero-secondary-btn">
+          <button
+            type="button"
+            className="hero-secondary-btn"
+            onClick={() => scrollToSection("contactus")}
+          >
             Contact Us
-          </a>
+          </button>
 
         </div>
 
@@ -57,20 +90,17 @@ export default function Hero() {
 
         <div className="hero-tabs">
 
-          <div className="hero-tab active-tab">
-            <h3>Claims Handling</h3>
-            <span>Independent Assessments</span>
-          </div>
-
-          <div className="hero-tab">
-            <h3>Risk Surveys</h3>
-            <span>Commercial & Industrial</span>
-          </div>
-
-          <div className="hero-tab">
-            <h3>Valuations</h3>
-            <span>Evidence-Based Reporting</span>
-          </div>
+          {serviceHighlights.map((item) => (
+            <button
+              type="button"
+              className={`hero-tab ${item.active ? "active-tab" : ""}`}
+              key={item.title}
+              onClick={() => scrollToSection(item.targetId)}
+            >
+              <h3>{item.title}</h3>
+              <span>{item.subtitle}</span>
+            </button>
+          ))}
 
         </div>
       </div>

@@ -1,184 +1,156 @@
 .process-page {
   width: 100%;
-
-  padding: 6.25rem 2.5rem;
-
   background: #f7f8f6;
-
+  padding: clamp(40px, 5vw, 60px) 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* HEADER */
-
 .process-header {
   text-align: center;
-
-  max-width: 56.25rem;
-
-  margin: 0 auto 5rem;
+  max-width: 900px;
+  margin: 0 auto clamp(20px, 3vw, 30px);
+  padding-inline: var(--site-padding-inline);
 }
 
 .process-header span {
-  color: #c89a3d;
-
-  font-size: 0.875rem;
+  color: var(--seltad-gold-500);
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
   font-weight: 600;
-
   letter-spacing: 0.25rem;
+  text-transform: uppercase;
 }
 
 .process-header h2 {
-  font-size: 4.375rem;
-
-  color: #072e22;
-
-  margin: 1.25rem 0;
+  font-size: var(--font-size-h2);
+  color: var(--seltad-green-900);
+  margin: clamp(10px, 1.5vw, 12px) 0;
+  font-weight: 700;
 }
 
 .process-header p {
   color: #555;
-
-  font-size: 1.25rem;
-
-  line-height: 1.8;
+  font-size: clamp(0.9375rem, 1.2vw, 1.125rem);
+  line-height: 1.6;
 }
 
 /* GRID */
-
 .process-grid {
-  max-width: 87.5rem;
-
+  width: 100%;
+  max-width: var(--site-container-max);
   margin: 0 auto;
-
+  padding-inline: var(--site-padding-inline);
   display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 2.1875rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-gap-sm);
 }
 
 /* CARD */
-
 .process-card {
   position: relative;
-
   background: white;
-
-  padding: 2.5rem;
-
-  border-radius: 1rem;
-
+  padding: clamp(16px, 2vw, 20px) clamp(12px, 1.5vw, 16px);
+  border-radius: 8px;
   text-align: center;
-
-  box-shadow:
-    0 0.625rem 1.875rem rgba(0,0,0,.08);
-
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
   transition: .3s ease;
+  border: 1px solid rgba(10, 79, 57, 0.05);
 }
 
 .process-card:hover {
-  transform: translateY(-0.5rem);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.1);
+  border-color: rgba(200, 154, 61, 0.3);
 }
 
 /* NUMBER */
-
 .process-number {
   position: absolute;
-
-  top: 1.25rem;
-  left: 1.25rem;
-
-  width: 4.0625rem;
-  height: 4.0625rem;
-
+  top: 12px;
+  left: 10px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-
-  background: #072e22;
-
+  background: var(--seltad-green-900);
   color: white;
-
-  border: 3px solid #c89a3d;
-
+  border: 2px solid var(--seltad-gold-500);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  font-size: 1.75rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
 /* ICON */
-
 .process-icon {
-  margin-top: 2.5rem;
-
-  color: #072e22;
-
-  margin-bottom: 1.5625rem;
+  margin-top: 16px;
+  color: var(--seltad-green-900);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
 }
 
 /* TITLE */
-
 .process-card h3 {
-  font-size: 2rem;
-
-  color: #072e22;
-
-  margin-bottom: 1.25rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--seltad-green-900);
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
 /* GOLD LINE */
-
 .gold-line {
-  width: 4.375rem;
-  height: 3px;
-
-  background: #c89a3d;
-
-  margin: 0 auto 1.5625rem;
+  width: 48px;
+  height: 2px;
+  background: var(--seltad-gold-500);
+  margin: 0 auto 8px;
 }
 
 /* TEXT */
-
 .process-card p {
   color: #555;
-
-  font-size: 1.125rem;
-
-  line-height: 1.8;
+  font-size: clamp(0.8125rem, 1vw, 0.875rem);
+  line-height: 1.5;
+  margin: 0;
 }
 
-/* RESPONSIVE */
+/* ==========================================================================
+   BREAKPOINTS
+   ========================================================================== */
 
-@media (max-width: 68.75rem) {
+/* LAPTOP (992px - 1199px) */
+@media (max-width: 1199px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* TABLET (768px - 991px) */
+@media (max-width: 991px) {
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .process-header h2 {
-    font-size: 3.5rem;
-  }
 }
 
-@media (max-width: 48rem) {
-
-  .process-page {
-    padding: 5rem 1.25rem;
-  }
-
+/* MOBILE ONLY (Below 768px) */
+@media (max-width: 767px) {
   .process-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
-
-  .process-header h2 {
-    font-size: 2.625rem;
+  
+  .process-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
-  .process-header p {
-    font-size: 1rem;
+  
+  .process-number {
+    position: static;
+    margin-bottom: 16px;
   }
-
-  .process-card h3 {
-    font-size: 1.75rem;
+  
+  .process-icon {
+    margin-top: 0;
   }
 }

@@ -1,10 +1,14 @@
 import AboutUs from "../components/AboutUs";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import Ourteam from "../components/Ourteam";
-import Process from "../components/Processes";
+//import Ourteam from "../components/Ourteam";
 import Servicestab from "../components/Servicestab";
-import Testimonial from "../components/Testimonial";
+// To show the Claims Process section again, uncomment this import and the
+// matching JSX block marked "CLAIMS PROCESS SECTION" below.
+// import Process from "../components/Processes";
+// To show the Testimonials section again, uncomment this import and the
+// matching JSX block marked "TESTIMONIALS SECTION" below.
+// import Testimonial from "../components/Testimonial";
 
 export default function HomePage() {
   return (
@@ -21,27 +25,31 @@ export default function HomePage() {
         <Servicestab />
       </section>
 
+      {/* CLAIMS PROCESS SECTION
       <div className="section-divider"></div>
 
       <section id="process">
         <Process />
       </section>
+      */}
 
       <div className="section-divider"></div>
 
-      <section id="team">
+      {/*<section id="team">
         <Ourteam />
-      </section>
+      </section>}
 
+      {/* TESTIMONIALS SECTION
       <div className="section-divider"></div>
 
       <section id="testimonials">
         <Testimonial />
       </section>
+      */}
 
       <div className="section-divider"></div>
 
-      <section id="contactus">
+      <section>
         <Footer />
       </section>
     </>
